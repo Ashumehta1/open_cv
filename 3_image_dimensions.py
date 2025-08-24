@@ -1,7 +1,14 @@
 import cv2
-image=cv2.imread("my_pic.png")
-if image:
-    h,w,c=image.shape
-    print("image dimensions: \nheight:{h}\nwidth:{w}\nchanel:{c}")
+image_=cv2.imread("krishna.jpg",0)
+if image_ is not None:
+    if len(image_.shape) == 2:
+        h,w=image_.shape
+        c=1
+    else:
+        h, w, c = image_.shape
+    print(f"image dimensions: \nheight:{h}\nwidth:{w}\nchanel:{c}")
+    cv2.imshow("pic",image_)
+    cv2.waitKey(0)
+    cv2.destroyAllwindow()
 else:
-    print("error: image not loaded")
+    print("Error: image not loaded")
