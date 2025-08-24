@@ -7,7 +7,14 @@ if img is not None:
     cv2.imshow(window_name,img_gray)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
-    file_name=input("Enter file name to save: ")
-    cv2.imwrite(file_name,img_gray)
+    file_name=input("Enter file name to save(with extension, e.g., photo.png): ")
+    if not (file_name.endswith(".png") or file_name.endswith(".jpg")):
+        file_name+=".png"
+    success=cv2.imwrite(file_name,img_gray)
+    if success:
+        print("File successfuly saved")
+    else:
+        print("error while saving")
+
 else:
     print("Error: Img not find")
