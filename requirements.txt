@@ -1,5 +1,25 @@
+# Data & plotting
 numpy
 pandas
-seaborn
 matplotlib
+seaborn
+
+# Computer vision
 opencv-python
+
+# Jupyter / IPython environment
+jupyter
+ipykernel
+ipython
+jupyter-client
+jupyter-core
+traitlets
+tornado
+pyzmq
+psutil
+prompt_toolkit<3.1.0
+pygments
+stack_data
+typing_extensions
+platformdirs
+pywin32
