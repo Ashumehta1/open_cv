@@ -11,4 +11,4 @@ else:
     cv2.imshow("img_horizontal",img_horizontal)
     cv2.imshow("img_both",img_both)
     cv2.waitKey(0)
-    cv2.destroyedAllwindow()
+    cv2.destroyAllWindow()
