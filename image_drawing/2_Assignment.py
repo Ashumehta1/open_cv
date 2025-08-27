@@ -4,6 +4,7 @@ import cv2
 img_path=input("Enter path to load pic: ")
 img=cv2.imread(img_path)
 selection =int(input("Enter 0 or 1 or 2 to draw line or rectangle or circle: "))
+img_path_write=input("Enter file name with .jpg or .png: ")
 
 def draw_line():
     pt1 = tuple(map(int, input("Enter starting coordinate (x,y): ").split(',')))
@@ -35,7 +36,8 @@ elif selection==1:
     image=draw_rectangle()
 elif selection==2:
     image=draw_circle()
-
+    
+cv2.imwrite(img_path_write,img)
 cv2.imshow("draw",image) 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
